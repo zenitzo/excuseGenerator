@@ -41,14 +41,13 @@ window.onload = function () {
   const generateExcuse = () => {
     const randomIndex = (array) => Math.floor(Math.random() * array.length);
 
+    const randomSubject = subjects[randomIndex(subjects)]
+    const randomAction = actions[randomIndex(actions)]
+    const randomObject = objects[randomIndex(objects)]
+    const randomTime = times[randomIndex(times)]
+
     return (
-      subjects[randomIndex(subjects)] +
-      " " +
-      actions[randomIndex(actions)] +
-      " " +
-      objects[randomIndex(objects)] +
-      " " +
-      times[randomIndex(times)]
+      `${randomSubject} ${randomAction} ${randomObject} ${randomTime}`
     );
   };
 
