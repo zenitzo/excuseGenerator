@@ -18,50 +18,77 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Excuse Generator</h1>
-      <p id="excuse" class="alert alert-warning mt-4">
-        Click the button to generate an excuse!
-      </p>
-      <button id="generate-btn" class="btn btn-primary mt-3">
-        Generate Excuse
-      </button>
+      
+      <header class="my-5">
+        <h1 class="display-4">Excuse Generator</h1>
+      </header>
 
-      <div class="container mt-5 d-flex justify-content-center">
-        <div class="card p-4 shadow">
-          <h4 class="mb-3 text-center">Add New Excuse Elements</h4>
-          <form id="add-item-form">
-            <div class="mb-3">
-              <label for="category" class="form-label text-secondary small"
-                >Category</label
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow-lg p-4">
+            <h4 class="mb-4 text-center">Customize Your Excuses</h4>
+
+            <div class="mb-4">
+              <label for="theme-select" class="form-label text-secondary small"
+                >Select a Theme</label
               >
-              <select class="form-control" id="category">
-                <option value="who">Who</option>
-                <option value="action">Action</option>
-                <option value="what">What</option>
-                <option value="when">When</option>
+              <select class="form-control" id="theme-select">
+                <option value="default">Default</option>
+                <option value="work">Work Excuses</option>
+                <option value="school">School Excuses</option>
+                <option value="funny">Funny Excuses</option>
               </select>
             </div>
-            <div class="mb-3">
-              <label for="new-item" class="form-label text-secondary small"
-                >New Item</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="new-item"
-                placeholder="e.g., my dog"
-                required
-              />
-            </div>
-            <button type="submit" class="btn btn-primary w-100">
-              Add Item
-            </button>
-          </form>
+
+            <form id="add-item-form">
+              <div class="mb-3">
+                <label for="category" class="form-label text-secondary small"
+                  >Category</label
+                >
+                <select class="form-control" id="category">
+                  <option value="who">Who</option>
+                  <option value="action">Action</option>
+                  <option value="what">What</option>
+                  <option value="when">When</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="new-item" class="form-label text-secondary small"
+                  >New Item</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="new-item"
+                  placeholder="e.g., my dog"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Add Item
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="fixed-bottom p-4">Made with ❤️ by Chris</div>
 
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+          <p id="excuse" class="alert alert-warning p-4">
+            Click the button to generate an excuse!
+          </p>
+          <button id="generate-btn" class="btn btn-primary btn-lg w-50 mb-5">
+            Generate Excuse
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="fixed-bottom p-4 bg-light">
+        <p class="mb-0">Hi this is my 4geeks excuse generator</p>
+      </footer>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
